@@ -16,7 +16,7 @@ export default function Edit() {
 
 	return (
 		<div className="w-full bg-[#eee] p-6">
-			<h2 className="text-3xl font-bold mb-8">Edit</h2>
+			<h2 className="text-3xl font-bold mb-6">Edit</h2>
 			<form
 				autoComplete="off"
 				onSubmit={(e) => {

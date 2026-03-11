@@ -1,10 +1,12 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
-let posts = createSlice({
+const posts = createSlice({
 	name: 'posts',
 	initialState: () => {
 		const saved = localStorage.getItem('posts');
-		return saved ? JSON.parse(saved) : [];
+		return saved
+			? JSON.parse(saved)
+			: [{ id: 0, title: 'Title', content: 'Content', liked: false }];
 	},
 	reducers: {
 		write(state, action) {
@@ -30,6 +32,12 @@ let posts = createSlice({
 
 export const { write, remove, like, edit } = posts.actions;
 
-export default configureStore({
+const store = configureStore({
 	reducer: { posts: posts.reducer },
 });
+
+store.subscribe(() => {
+	localStorage.setItem('posts', JSON.stringify(store.getState().posts));
+});
+
+export default store;

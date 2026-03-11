@@ -15,12 +15,14 @@ function App() {
 
 	return (
 		<>
-			<nav className="w-full h-16 bg-[#ddd] flex items-center">
+			<nav className="w-full h-20 bg-[#ddd] flex items-center">
 				<Link to="/">
 					<h1 className="text-4xl mx-4">Forum</h1>
 				</Link>
 				<Link to="/write">
-					<h1 className="text-3xl mx-2 text-gray-400">Write</h1>
+					<h1 className="text-3xl text-gray-400 font-extralight ml-2 hover:text-black transition-colors">
+						Write
+					</h1>
 				</Link>
 			</nav>
 
@@ -28,7 +30,7 @@ function App() {
 				<Route
 					path="/"
 					element={
-						<div className="w-full bg-[#eee] p-6">
+						<div className="w-full bg-[#eee] px-6 py-2">
 							{posts.map((post) => (
 								<Card post={post} key={post.id} />
 							))}
@@ -52,9 +54,9 @@ function Card({ post }) {
 	useEffect(() => {
 		setLiked(post.liked);
 	}, [posts]);
-   
+
 	return (
-		<div className="w-full min-h-40 p-4 my-4 bg-white rounded-lg shadow-md">
+		<div className="w-full min-h-40 p-4 my-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow ">
 			<h2 className="text-3xl font-semibold">{post.title}</h2>
 			<p className="text-2xl">{post.content}</p>
 			<div className="flex">

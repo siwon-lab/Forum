@@ -15,4 +15,4 @@ practice project
 - Vite
 - Redux Toolkit
 - React Router DOM
-- localStorage
+- Tailwind CSS
