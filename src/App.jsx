@@ -1,23 +1,14 @@
-import { useEffect, useState } from 'react';
 import './App.css';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Write from './pages/write';
 import Edit from './pages/Edit';
 import Home from './pages/Home';
+import Nav from './components/Nav';
 
 function App() {
 	return (
 		<>
-			<nav className="w-full h-20 bg-[#ddd] flex items-center">
-				<Link to="/">
-					<h1 className="text-4xl mx-4">Forum</h1>
-				</Link>
-				<Link to="/write">
-					<h1 className="text-3xl text-gray-400 font-extralight ml-2 hover:text-black transition-colors">
-						Write
-					</h1>
-				</Link>
-			</nav>
+			<Nav />
 
 			<Routes>
 				<Route path="/" element={<Home />} />
