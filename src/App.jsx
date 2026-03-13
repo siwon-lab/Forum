@@ -3,16 +3,9 @@ import './App.css';
 import { Link, Route, Routes } from 'react-router-dom';
 import Write from './pages/write';
 import Edit from './pages/Edit';
-import { useSelector } from 'react-redux';
-import Post from './components/Post';
+import Home from './pages/Home';
 
 function App() {
-	const posts = useSelector((state) => state.posts);
-
-	useEffect(() => {
-		localStorage.setItem('posts', JSON.stringify(posts));
-	}, [posts]);
-
 	return (
 		<>
 			<nav className="w-full h-20 bg-[#ddd] flex items-center">
@@ -27,16 +20,7 @@ function App() {
 			</nav>
 
 			<Routes>
-				<Route
-					path="/"
-					element={
-						<div className="w-full bg-[#eee] px-6 py-2">
-							{posts.map((post) => (
-								<Post post={post} key={post.id} />
-							))}
-						</div>
-					}
-				/>
+				<Route path="/" element={<Home />} />
 				<Route path="/write" element={<Write />} />
 				<Route path="/edit/:id" element={<Edit />} />
 				<Route path="*" element={<p>404</p>} />
