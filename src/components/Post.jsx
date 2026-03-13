@@ -14,7 +14,7 @@ export default function Post({ post }) {
 	}, [posts]);
 
 	return (
-		<div className="w-full min-h-40 p-4 my-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow ">
+		<div className="w-full min-h-40 p-4 my-2 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
 			<h2 className="text-3xl font-semibold">{post.title}</h2>
 			<p className="text-2xl">{post.content}</p>
 			<div className="flex">
@@ -31,7 +31,7 @@ export default function Post({ post }) {
 				<span className="text-2xl cursor-pointer underline mr-4">수정</span>
 			</Link>
 			<span
-				className="text-2xl cursor-pointer underline"
+				className="text-2xl cursor-pointer underline hover:text-red-500 transition-colors duration-300"
 				onClick={() => {
 					dispatch(remove(post.id));
 				}}

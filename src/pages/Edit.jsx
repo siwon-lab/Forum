@@ -54,7 +54,7 @@ export default function Edit() {
 					onChange={(e) => {
 						setContent(e.target.value);
 					}}
-				></textarea>
+				/>
 				<button
 					type="submit"
 					className="w-32 block bg-red-500 mt-4 p-2 rounded-lg text-white"

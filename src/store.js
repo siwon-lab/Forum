@@ -27,10 +27,13 @@ const posts = createSlice({
 			const post = state.find((obj) => obj.id === action.payload);
 			post.liked = !post.liked;
 		},
+      removeAll(state) {
+         return []
+      }
 	},
 });
 
-export const { write, remove, like, edit } = posts.actions;
+export const { write, remove, like, edit, removeAll } = posts.actions;
 
 const store = configureStore({
 	reducer: { posts: posts.reducer },
