@@ -2,7 +2,7 @@
 
 ## 한국어
 
-간단한 포럼입니다.
+간단한 포럼 프로젝트
 
 ### 기능들
 
@@ -28,14 +28,14 @@ npm run dev
 
 ## English
 
-It's a simple forum.
+A simple forum project
 
 ### Features
 
-- write a post
-- edit a post
-- like a post
-- remove a post
+- Write a post
+- Edit a post
+- Like a post
+- Remove a post
 
 ### Tech Stack
 
