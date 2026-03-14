@@ -57,7 +57,7 @@ export default function Edit() {
             />
             <button
                type="submit"
-               className="mt-4 block w-32 rounded-lg bg-red-500 p-2 text-white"
+               className="mt-4 block w-32 cursor-pointer rounded-lg bg-blue-500 p-2 text-white"
             >
                완료
             </button>

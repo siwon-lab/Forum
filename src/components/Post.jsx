@@ -28,10 +28,10 @@ export default function Post({ post }) {
             </button>
          </div>
          <Link to={'/edit/' + post.id}>
-            <span className="mr-4 cursor-pointer text-2xl underline">수정</span>
+            <span className="mr-4 cursor-pointer text-2xl underline transition-colors hover:text-blue-500">수정</span>
          </Link>
          <span
-            className="cursor-pointer text-2xl underline transition-colors duration-300 hover:text-red-500"
+            className="cursor-pointer text-2xl underline transition-colors hover:text-red-500"
             onClick={() => {
                dispatch(remove(post.id));
             }}

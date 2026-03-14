@@ -9,7 +9,7 @@ export default function Home() {
    return (
       <div className="flex w-full flex-col bg-[#eee] px-6 py-4">
          <button
-            className="mb-2 ml-auto cursor-pointer rounded-md border border-red-500 p-1 text-2xl text-red-500 transition-colors duration-300 hover:bg-red-500 hover:text-white"
+            className="mb-2 ml-auto cursor-pointer rounded-md border border-red-500 text-xl p-1 font-semibold text-red-500 transition-colors duration-300 hover:bg-red-500 hover:text-white"
             onClick={() => {
                dispatch(removeAll());
             }}

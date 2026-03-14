@@ -7,7 +7,7 @@ export default function Nav() {
             <h1 className="mx-4 text-4xl">Forum</h1>
          </Link>
          <Link to="/write">
-            <h1 className="ml-2 text-3xl font-extralight text-gray-400 transition-colors duration-300 hover:text-black">
+            <h1 className="ml-2 text-3xl font-extralight text-gray-400 transition-colors hover:text-black">
                Write
             </h1>
          </Link>
