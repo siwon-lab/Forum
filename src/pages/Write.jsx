@@ -39,7 +39,7 @@ export default function Write() {
             <p className="text-2xl">Title</p>
             <input
                type="text"
-               className="mb-2 rounded bg-white p-2"
+               className="mb-2 rounded bg-white p-2 outline-none"
                value={title}
                onChange={(e) => {
                   setTitle(e.target.value);
@@ -47,7 +47,7 @@ export default function Write() {
             />
             <p className="text-2xl">Content</p>
             <textarea
-               className="mb-2 rounded bg-white p-2"
+               className="mb-2 rounded bg-white p-2 outline-none"
                value={content}
                onChange={(e) => {
                   setContent(e.target.value);
