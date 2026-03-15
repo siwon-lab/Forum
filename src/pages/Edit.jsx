@@ -15,7 +15,7 @@ export default function Edit() {
    const [content, setContent] = useState(post.content);
 
    return (
-      <div className="w-full bg-[#eee] p-6">
+      <div className="min-h-screen w-full bg-[#eee] p-6">
          <h2 className="mb-6 text-3xl font-bold">Edit</h2>
          <form
             autoComplete="off"

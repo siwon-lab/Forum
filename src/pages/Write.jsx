@@ -13,7 +13,7 @@ export default function Write() {
    const [content, setContent] = useState('');
 
    return (
-      <div className="w-full bg-[#eee] p-6">
+      <div className="min-h-screen w-full bg-[#eee] p-6">
          <h2 className="mb-6 text-3xl font-bold">Write</h2>
          <form
             onSubmit={(e) => {
